@@ -22,18 +22,6 @@ cd ~
 git clone https://github.com/nkgrnkgr/dotfiles.git
 ```
 
-### Create .zshenv
-
-```bash
-touch ~/.zshenv
-```
-
-**.zshenv**
-```bash
-export ZDOTDIR=$HOME/dotfiles/.zsh
-source $ZDOTDIR/.zshenv
-```
-
 ### Create .zsh-history
 ```bash
 touch ~/.zsh-history
