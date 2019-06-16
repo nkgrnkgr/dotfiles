@@ -1,6 +1,6 @@
 # dotfiles
 
-## how to use
+## How To Use
 
 ### Install Brew Library
 
