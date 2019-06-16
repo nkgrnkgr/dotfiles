@@ -36,7 +36,7 @@ source $ZDOTDIR/.zshenv
 
 ### Create .zsh-history
 ```bash
-touch .zsh-history
+touch ~/.zsh-history
 ```
 
 ### Load
