@@ -15,26 +15,26 @@ brew info zsh
 chsh -s /usr/local/bin/zsh
 ```
 
-### clone
+### Clone
 
 ```bash
 cd ~
 git clone https://github.com/nkgrnkgr/dotfiles.git
 ```
 
-### create .zshenv
+### Create .zshenv
 
 ```bash
 touch ~/.zshenv
 ```
 
-#### .zshenv
+**.zshenv**
 ```bash
 export ZDOTDIR=$HOME/dotfiles/.zsh
 source $ZDOTDIR/.zshenv
 ```
 
-### load
+### Load
 
 ```bash
 source ~/dotfiles/.zsh/.zshrc
