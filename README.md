@@ -21,12 +21,15 @@ chsh -s /usr/local/bin/zsh
 cd ~
 git clone https://github.com/nkgrnkgr/dotfiles.git
 ```
+### Setup
 
-### Create .zsh-history
+#### Create Symbolic Link and zsh-history
+
 ```bash
-touch ~/.zsh-history
+chmod +x dotfiles/setup.sh
+cd ~/dotfiles
+sh setup.sh
 ```
-
 ### Load
 
 ```bash
