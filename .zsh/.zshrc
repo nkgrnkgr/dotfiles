@@ -43,6 +43,11 @@ zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
+
+# emoji
+zplug "b4b4r07/emoji-cli"
+export EMOJI_CLI_FILTER=peco
+
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
@@ -94,3 +99,14 @@ bindkey '^[d' peco-cdr
 #####################################################################################
 #nodenv
 eval "$(nodenv init -)"
+
+
+gcop() {
+  git branch -a --sort=-authordate |
+    grep -v -e '->' -e '*' |
+    perl -pe 's/^\h+//g' |
+    perl -pe 's#^remotes/origin/###' |
+    perl -nle 'print if !$c{$_}++' |
+    peco |
+    xargs git checkout
+}
