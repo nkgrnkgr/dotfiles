@@ -110,3 +110,6 @@ gcop() {
     peco |
     xargs git checkout
 }
+
+## 英数固定
+osascript -e 'tell application "System Events" to key code 102'
