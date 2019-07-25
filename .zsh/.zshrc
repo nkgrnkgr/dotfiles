@@ -43,6 +43,11 @@ zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
+
+# emoji
+zplug "b4b4r07/emoji-cli"
+export EMOJI_CLI_FILTER=peco
+
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
@@ -89,6 +94,7 @@ zle -N peco-cdr
 bindkey '^[d' peco-cdr
 
 
+<<<<<<< HEAD
 ## alias
 ## alias gbp='git b | peco | pbcopy'
 
@@ -111,3 +117,5 @@ gcop() {
     peco |
     xargs git checkout
 }
+## 英数固定
+osascript -e 'tell application "System Events" to key code 102'

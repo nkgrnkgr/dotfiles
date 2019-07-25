@@ -7,7 +7,10 @@ export PATH=${JAVA_HOME}/bin:${PATH}
 export PATH="/usr/local/opt/maven@3.2/bin:$PATH"
 
 # mysql
-#export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 # nodebrew
 export PATH="$HOME/.nodebrew/current/bin:$PATH"
+
+# python
+alias python='python3'
