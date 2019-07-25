@@ -1,16 +1,16 @@
 [user]
-	name = nkgrnkgr
-	email = beefupme@gmail.com
-  username = nkgrnkgr
+	name = taiki-nishi
+	email = taiki-nishi@cybozu.co.jp
+  username = taiki-nishi
 [core]
-	excludesfile = /Users/user/.gitignore_global
+  excludesfile = /Users/nishitaiki/.gitignore_global
   editor = vim -c \"set fenc=utf-8\"
 [filter "lfs"]
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
   required = true
 [commit]
-	template = /Users/user/.stCommitMsg
+	template = /Users/nishitaiki/.stCommitMsg
 [color]
   ui = true
 [alias]
@@ -42,3 +42,5 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[http]
+	sslVerify = false

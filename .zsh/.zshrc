@@ -89,8 +89,25 @@ zle -N peco-cdr
 bindkey '^[d' peco-cdr
 
 
-#####################################################################################
-# peco and history and cdr
-#####################################################################################
-#nodenv
-eval "$(nodenv init -)"
+## alias
+## alias gbp='git b | peco | pbcopy'
+
+gbs() {
+  git branch -a --sort=-authordate |
+    grep -v -e '->' -e '*' |
+    perl -pe 's/^\h+//g' |
+    perl -pe 's#^remotes/origin/###' |
+    perl -nle 'print if !$c{$_}++' |
+    peco |
+    pbcopy
+}
+
+gcop() {
+  git branch -a --sort=-authordate |
+    grep -v -e '->' -e '*' |
+    perl -pe 's/^\h+//g' |
+    perl -pe 's#^remotes/origin/###' |
+    perl -nle 'print if !$c{$_}++' |
+    peco |
+    xargs git checkout
+}
