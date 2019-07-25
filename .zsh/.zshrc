@@ -93,8 +93,6 @@ function peco-cdr () {
 zle -N peco-cdr
 bindkey '^[d' peco-cdr
 
-
-<<<<<<< HEAD
 ## alias
 ## alias gbp='git b | peco | pbcopy'
 
